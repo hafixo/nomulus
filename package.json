@@ -4,7 +4,9 @@
   "description": "Top-level domain name registry service on Google App Engine  https://registry.google",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,8 @@
   },
   "homepage": "https://github.com/google/nomulus#readme",
   "dependencies": {
-    "google-closure-library": "20190325.0.0"
+    "google-closure-library": "20190325.0.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "jasmine-core": "3.4.0",
@@ -26,5 +29,6 @@
     "karma-closure": "0.1.3",
     "karma-jasmine": "2.0.1",
     "puppeteer": "2.0.0"
-  }
+  },
+  "snyk": true
 }
